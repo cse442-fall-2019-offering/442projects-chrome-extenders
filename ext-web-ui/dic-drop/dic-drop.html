@@ -3,32 +3,15 @@
 <head>
 <link rel='stylesheet' type='text/css' href='dic-drop.css'/>
 </head>
-
 <body>
-<div class="container">
-  <ul>
-    <li class="dropdown">
-      <input type="checkbox" />
-      <a href="#" data-toggle="dropdown">Definitions:</a>
-      <div class='dropdown-menu'>
-        <p>This is a list of definitions.</p>
-      </div>
-    </li>
-    <li class="dropdown">
-      <input type="checkbox" />
-      <a href="#" data-toggle="dropdown">Synonsyms:</a>
-      <div class='dropdown-menu'>
-        <p>This is a list of synonyms.</p>
-      </div>
-    </li>
-    <li class="dropdown">
-      <input type="checkbox" />
-      <a href="#" data-toggle="dropdown">Google Results:</a>
-      <div class="dropdown-menu">
-        <p>This is a list of Google search results.</p>
-      </div>
-    </li>
-  </ul>
+<div class='popup'>
+   <button onclick='buttPress()' class='button'></button>
+   <div id='menu' class='popup-defs'>
+      <a href='#' id='1'>Definitions:</a>
+	  <a href='#' id='2'>Synonyms:</a>
+	  <a href='#' id='3'>Google Results:</a>
+   </div>
 </div>
 </body>
+<script type="text/javascript" src="dic-drop.js"></script>
 </html>
