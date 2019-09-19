@@ -1,0 +1,42 @@
+$back-color: #a8cded;
+$back-color2: #f1f1f1;
+$blue: #2980B9;
+$gray: #EEE;
+$gray2: #ddd;
+$butt-size: 20px;
+
+.button {
+  color: black;
+  min-width: $butt-size;
+  min-height: $butt-size;
+  border:0;
+  font-size:1.5em;
+  cursor:pointer;
+  background-image: url('../src/logo.ico');
+  background-repeat: no-repeat;
+  background-size: $butt-size $butt-size;
+}
+
+.popup{
+  position: relative;
+  display: inline-block;
+}
+
+.popup-defs{
+  display: none;
+  position: absolute;
+  background-color: $back-color2;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.popup-defs a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+}
+
+.popup-defs a:hover { background-color: $gray2 }
+
+.show { display:block; }
