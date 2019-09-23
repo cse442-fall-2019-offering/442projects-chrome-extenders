@@ -16,7 +16,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.message === "open_popup") {
     chrome.windows.create(
       {
-        url: chrome.extension.getURL("./dic-drop/dic-drop.html"),
+        url: chrome.extension.getURL("dictwin.html"),
         type: "panel",
         focused: true,
         top: 60,
