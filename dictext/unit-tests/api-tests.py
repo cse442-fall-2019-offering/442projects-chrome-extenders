@@ -20,22 +20,22 @@ def get_definitions_for_imput_word_in_terminal():
     language = 'en-us'
     word_id = word
     fields = 'definitions'
-    # strictMatch = 'false'
+    strictMatch = 'false'
 
     url = 'https://od-api.oxforddictionaries.com/api/v2/' + endpoint + '/' + language + \
-        '/' + word_id.lower() + '?fields=' + fields
+        '/' + word_id.lower() + '?fields=' + fields + '&strictMatch=' + strictMatch
 
     # + '?fields=' + fields + '&strictMatch=' + strictMatch
 
     r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key})
     data = json.loads(r.text)
+    # data = r.text
 
-    # print(data)
-    pprint.pprint(data)
+    senses_array = data['results'][0]['lexicalEntries'][0]['entries'][0]['senses']
 
-    # print("code {}\n".format(r.status_code))
-    # print("text \n" + r.text)
-    # print("json \n" + json.dumps(r.json()))
+    for i in senses_array:
+        print(i['definitions'][0])
+        print('\n')
 
 
 if __name__ == "__main__":

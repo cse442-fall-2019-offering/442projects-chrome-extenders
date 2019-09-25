@@ -1,0 +1,346 @@
+{
+    "id": "sound",
+    "metadata": {
+        "operation": "retrieve",
+        "provider": "Oxford University Press",
+        "schema": "RetrieveEntry"
+    },
+    "results": [
+        {
+            "id": "sound",
+            "language": "en-us",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "homographNumber": "100",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "vibrations that travel through the air or another medium and can be heard when they reach a person's or animal's ear"
+                                    ],
+                                    "id": "m_en_gbus0970160.008",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "a thing that can be heard"
+                                            ],
+                                            "id": "m_en_gbus0970160.010"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "the area or distance within which something can be heard"
+                                            ],
+                                            "id": "m_en_gbus0970160.013"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "sound produced by continuous and regular vibrations, as opposed to noise."
+                                    ],
+                                    "id": "m_en_gbus0970160.015"
+                                },
+                                {
+                                    "definitions": [
+                                        "music, speech, and sound effects when recorded, used to accompany a film or video production, or broadcast"
+                                    ],
+                                    "id": "m_en_gbus0970160.020",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "broadcasting by radio as distinct from television."
+                                            ],
+                                            "id": "m_en_gbus0970160.021"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "the distinctive quality of the music of a particular composer or performer or of the sound produced by a particular musical instrument"
+                                            ],
+                                            "id": "m_en_gbus0970160.022"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "music, especially popular music"
+                                            ],
+                                            "id": "m_en_gbus0970160.023"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "the ideas or impressions conveyed by words"
+                                    ],
+                                    "id": "m_en_gbus0970160.026"
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "noun",
+                        "text": "Noun"
+                    },
+                    "text": "sound"
+                },
+                {
+                    "entries": [
+                        {
+                            "homographNumber": "101",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "emit or cause to emit sound"
+                                    ],
+                                    "id": "m_en_gbus0970160.029",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "give an audible signal to indicate (something)"
+                                            ],
+                                            "id": "m_en_gbus0970160.036"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "express or convey (a warning)"
+                                            ],
+                                            "id": "m_en_gbus0970160.037"
+                                        },
+                                        {
+                                            "definitions": [
+                                                "test (the lungs or another body cavity) by noting the sound they produce"
+                                            ],
+                                            "id": "m_en_gbus0970160.039"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "convey a specified impression when heard"
+                                    ],
+                                    "id": "m_en_gbus0970160.041",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "(of something or someone that has been described to one) convey a specified impression"
+                                            ],
+                                            "id": "m_en_gbus0970160.042"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "verb",
+                        "text": "Verb"
+                    },
+                    "text": "sound"
+                }
+            ],
+            "type": "headword",
+            "word": "sound"
+        },
+        {
+            "id": "sound",
+            "language": "en-us",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "homographNumber": "200",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "in good condition; not damaged, injured, or diseased"
+                                    ],
+                                    "id": "m_en_gbus0970170.007",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "financially secure"
+                                            ],
+                                            "id": "m_en_gbus0970170.011"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "based on reason, sense, or judgment"
+                                    ],
+                                    "id": "m_en_gbus0970170.015",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "competent, reliable, or holding acceptable views"
+                                            ],
+                                            "id": "m_en_gbus0970170.016"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "(of sleep) deep and undisturbed."
+                                    ],
+                                    "id": "m_en_gbus0970170.018",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "(of a person) tending to sleep deeply"
+                                            ],
+                                            "id": "m_en_gbus0970170.019"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "severe"
+                                    ],
+                                    "id": "m_en_gbus0970170.021"
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "adjective",
+                        "text": "Adjective"
+                    },
+                    "text": "sound"
+                },
+                {
+                    "entries": [
+                        {
+                            "homographNumber": "201",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "soundly"
+                                    ],
+                                    "id": "m_en_gbus0970170.023"
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "adverb",
+                        "text": "Adverb"
+                    },
+                    "text": "sound"
+                }
+            ],
+            "type": "headword",
+            "word": "sound"
+        },
+        {
+            "id": "sound",
+            "language": "en-us",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "homographNumber": "300",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "ascertain (the depth of water), typically by means of a line or pole or using sound echoes."
+                                    ],
+                                    "id": "m_en_gbus0970180.007",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "examine (a person's bladder or other internal cavity) with a long surgical probe."
+                                            ],
+                                            "id": "m_en_gbus0970180.014"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "question (someone), typically in a cautious or discreet way, as to their opinions or feelings on a subject"
+                                    ],
+                                    "id": "m_en_gbus0970180.016",
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "inquire into (someone's opinions of feelings) in a cautious way"
+                                            ],
+                                            "id": "m_en_gbus0970180.017"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "(especially of a whale) dive down steeply to a great depth."
+                                    ],
+                                    "id": "m_en_gbus0970180.021"
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "verb",
+                        "text": "Verb"
+                    },
+                    "text": "sound"
+                },
+                {
+                    "entries": [
+                        {
+                            "homographNumber": "301",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "a long surgical probe, typically with a curved, blunt end."
+                                    ],
+                                    "id": "m_en_gbus0970180.023"
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "noun",
+                        "text": "Noun"
+                    },
+                    "text": "sound"
+                }
+            ],
+            "type": "headword",
+            "word": "sound"
+        },
+        {
+            "id": "sound",
+            "language": "en-us",
+            "lexicalEntries": [
+                {
+                    "entries": [
+                        {
+                            "homographNumber": "400",
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "a narrow stretch of water forming an inlet or connecting two wider areas of water such as two seas or a sea and a lake."
+                                    ],
+                                    "id": "m_en_gbus0970190.003"
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "noun",
+                        "text": "Noun"
+                    },
+                    "text": "sound"
+                }
+            ],
+            "type": "headword",
+            "word": "sound"
+        }
+    ],
+    "word": "sound"
+}
