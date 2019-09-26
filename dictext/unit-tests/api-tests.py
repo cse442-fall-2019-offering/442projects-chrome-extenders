@@ -45,6 +45,7 @@ def get_definitions_for_imput_word_in_terminal():
 
     return definitions_array
 
+# comment 
 
 def get_synonyms():
     return 0
