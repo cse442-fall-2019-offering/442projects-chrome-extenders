@@ -47,15 +47,15 @@ def get_definitions_for_imput_word_in_terminal():
 
 
 def get_synonyms():
-    return null
+    return 0
 
 
 def get_antonyms():
-    return null
+    return 0
 
 
 def get_example():
-    return null
+    return 0
 
 
 if __name__ == "__main__":
