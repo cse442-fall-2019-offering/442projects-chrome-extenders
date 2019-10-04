@@ -72,48 +72,6 @@ def get_synonyms_and_antonyms(word):
     print('antonyms')
     print(antonyms)
 
-    # put them into respective arrays
-    # synonyms_array = []
-    # for i in s_senses_array:
-    #     synonyms_array.append(i['text'])
-
-    # antonyms_array = []
-    # for i in a_senses_array:
-    #     antonyms_array.append(i['text'])
-
-    # print("synonyms:")
-    # print(synonyms_array)
-    # print("antonyms:")
-    # print(antonyms_array)
-
-    return 0
-
-
-def get_antonyms(word):
-    print('antonyms:')
-
-    app_id = d_app_id
-    app_key = d_app_key
-
-    endpoint = 'thesaurus'
-    language = 'en-us'
-    word_id = word
-    fields = 'synonyms'
-    strictMatch = 'false'
-
-    url = 'https://od-api.oxforddictionaries.com/api/v2/' + endpoint + '/' + language + \
-        '/' + word_id.lower() + '?fields=' + fields + '&strictMatch=' + strictMatch
-
-    r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key})
-    data = json.loads(r.text)
-
-    senses_array = data['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['synonyms']
-
-    synonyms_array = []
-    for i in senses_array:
-        synonyms_array.append(i['text'])
-
-    print(synonyms_array)
     return 0
 
 
