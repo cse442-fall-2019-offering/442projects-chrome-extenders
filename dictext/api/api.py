@@ -36,7 +36,7 @@ def get_definitions(word):
 
     print(definitions_array)
 
-    return 0
+    return str(definitions_array)
 
 
 def get_synonyms_and_antonyms(word):
@@ -76,4 +76,8 @@ def get_synonyms_and_antonyms(word):
 
 
 def get_example(word):
+    return 0
+
+#puts all of the returned data into one data struct to be called by word_request.py
+def results():
     return 0
