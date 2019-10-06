@@ -1,4 +1,4 @@
-from api import *
+from dictext.api.api import *
 
 if __name__ == "__main__":
     word = input("Enter word you'd like to get the defintion of: ")

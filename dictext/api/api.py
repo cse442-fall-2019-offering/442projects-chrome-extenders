@@ -75,5 +75,5 @@ def get_synonyms_and_antonyms(word):
     return 0
 
 
-def get_example():
+def get_example(word):
     return 0
