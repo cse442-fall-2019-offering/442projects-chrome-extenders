@@ -9,8 +9,6 @@ import pprint
 
 
 def get_definitions(word):
-    print(word + '\n' + 'definitions:')
-
     app_id = d_app_id
     app_key = d_app_key
 
@@ -32,14 +30,16 @@ def get_definitions(word):
     # put all defintions into array
     definitions_array = []
     for i in senses_array:
-        definitions_array.append(i['definitions'][0])
+        definitions_array.append(str(i['definitions'][0]))
 
-    print(definitions_array)
+    def_kvp = {"defintions": definitions_array}
 
-    return str(definitions_array)
+    print(def_kvp)
+    return def_kvp
 
 
 def get_synonyms_and_antonyms(word):
+    thesaurus_kvp = {}
     app_id = d_app_id
     app_key = d_app_key
 
@@ -63,21 +63,45 @@ def get_synonyms_and_antonyms(word):
         for i in senses_array['synonyms']:
             synonyms.append(i['text'])
 
+    thesaurus_kvp.update({"synonyms" : synonyms})
+
     if 'antonyms' in senses_array:
         for i in senses_array['antonyms']:
             antonyms.append(i['text'])
 
-    print('synonyms')
-    print(synonyms)
-    print('antonyms')
-    print(antonyms)
+    thesaurus_kvp.update({"antonyms": antonyms})
 
-    return 0
+    print(thesaurus_kvp)
+    return thesaurus_kvp
 
 
 def get_example(word):
-    return 0
+    example_kvp = {}
+
+    app_id = d_app_id
+    app_key = d_app_key
+
+    endpoint = 'sentences'
+    language = 'en-us'
+    word_id = word
+    strictMatch = 'false'
+
+    url = 'https://od-api.oxforddictionaries.com/api/v2/' + endpoint + '/' + language + \
+        '/' + word_id.lower() + '?strictMatch=' + strictMatch
+
+    r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key})
+    data = json.loads(r.text)
+
+    one_example = [str(data['results'][0]['lexicalEntries'][0]['sentences'][0]['text'])]
+
+    example_kvp = {"example" : one_example}
+    print(example_kvp)
+    return example_kvp
 
 #puts all of the returned data into one data struct to be called by word_request.py
-def results():
-    return 0
+def results(word):
+    results = {}
+    results.update(get_definitions(word))
+    results.update(get_synonyms_and_antonyms(word))
+    results.update(get_example(word))
+    return results
