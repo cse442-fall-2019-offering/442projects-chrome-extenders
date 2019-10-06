@@ -34,7 +34,7 @@ def get_definitions(word):
 
     def_kvp = {"defintions": definitions_array}
 
-    print(def_kvp)
+    # print(def_kvp)
     return def_kvp
 
 
@@ -71,7 +71,7 @@ def get_synonyms_and_antonyms(word):
 
     thesaurus_kvp.update({"antonyms": antonyms})
 
-    print(thesaurus_kvp)
+    # print(thesaurus_kvp)
     return thesaurus_kvp
 
 
@@ -95,7 +95,7 @@ def get_example(word):
     one_example = [str(data['results'][0]['lexicalEntries'][0]['sentences'][0]['text'])]
 
     example_kvp = {"example" : one_example}
-    print(example_kvp)
+    # print(example_kvp)
     return example_kvp
 
 #puts all of the returned data into one data struct to be called by word_request.py
@@ -104,4 +104,5 @@ def results(word):
     results.update(get_definitions(word))
     results.update(get_synonyms_and_antonyms(word))
     results.update(get_example(word))
+    print(results)
     return results
