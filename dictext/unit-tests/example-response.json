@@ -1,346 +1,515 @@
 {
-    "id": "sound",
-    "metadata": {
-        "operation": "retrieve",
-        "provider": "Oxford University Press",
-        "schema": "RetrieveEntry"
-    },
-    "results": [
+  "id": "ace",
+  "metadata": {
+    "operation": "retrieve",
+    "provider": "Oxford University Press",
+    "schema": "Thesaurus"
+  },
+  "results": [
+    {
+      "id": "ace",
+      "language": "en-gb",
+      "lexicalEntries": [
         {
-            "id": "sound",
-            "language": "en-us",
-            "lexicalEntries": [
+          "entries": [
+            {
+              "senses": [
                 {
-                    "entries": [
+                  "antonyms": [
+                    {
+                      "id": "amateur",
+                      "language": "en",
+                      "text": "amateur"
+                    }
+                  ],
+                  "examples": [
+                    {
+                      "text": "a rowing ace"
+                    }
+                  ],
+                  "id": "t_en_gb0000173.001",
+                  "registers": [
+                    {
+                      "id": "informal",
+                      "text": "Informal"
+                    }
+                  ],
+                  "subsenses": [
+                    {
+                      "id": "id58c1a8d4-45ca-48d7-8962-efac9c890240",
+                      "synonyms": [
                         {
-                            "homographNumber": "100",
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "vibrations that travel through the air or another medium and can be heard when they reach a person's or animal's ear"
-                                    ],
-                                    "id": "m_en_gbus0970160.008",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "a thing that can be heard"
-                                            ],
-                                            "id": "m_en_gbus0970160.010"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "the area or distance within which something can be heard"
-                                            ],
-                                            "id": "m_en_gbus0970160.013"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "sound produced by continuous and regular vibrations, as opposed to noise."
-                                    ],
-                                    "id": "m_en_gbus0970160.015"
-                                },
-                                {
-                                    "definitions": [
-                                        "music, speech, and sound effects when recorded, used to accompany a film or video production, or broadcast"
-                                    ],
-                                    "id": "m_en_gbus0970160.020",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "broadcasting by radio as distinct from television."
-                                            ],
-                                            "id": "m_en_gbus0970160.021"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "the distinctive quality of the music of a particular composer or performer or of the sound produced by a particular musical instrument"
-                                            ],
-                                            "id": "m_en_gbus0970160.022"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "music, especially popular music"
-                                            ],
-                                            "id": "m_en_gbus0970160.023"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "the ideas or impressions conveyed by words"
-                                    ],
-                                    "id": "m_en_gbus0970160.026"
-                                }
-                            ]
+                          "language": "en",
+                          "text": "wunderkind"
                         }
-                    ],
-                    "language": "en-us",
-                    "lexicalCategory": {
-                        "id": "noun",
-                        "text": "Noun"
+                      ]
                     },
-                    "text": "sound"
-                },
-                {
-                    "entries": [
+                    {
+                      "id": "id9e56b5c9-22b6-4e25-b5e8-fca8562c3166",
+                      "registers": [
                         {
-                            "homographNumber": "101",
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "emit or cause to emit sound"
-                                    ],
-                                    "id": "m_en_gbus0970160.029",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "give an audible signal to indicate (something)"
-                                            ],
-                                            "id": "m_en_gbus0970160.036"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "express or convey (a warning)"
-                                            ],
-                                            "id": "m_en_gbus0970160.037"
-                                        },
-                                        {
-                                            "definitions": [
-                                                "test (the lungs or another body cavity) by noting the sound they produce"
-                                            ],
-                                            "id": "m_en_gbus0970160.039"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "convey a specified impression when heard"
-                                    ],
-                                    "id": "m_en_gbus0970160.041",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "(of something or someone that has been described to one) convey a specified impression"
-                                            ],
-                                            "id": "m_en_gbus0970160.042"
-                                        }
-                                    ]
-                                }
-                            ]
+                          "id": "informal",
+                          "text": "Informal"
                         }
-                    ],
-                    "language": "en-us",
-                    "lexicalCategory": {
-                        "id": "verb",
-                        "text": "Verb"
+                      ],
+                      "synonyms": [
+                        {
+                          "id": "demon",
+                          "language": "en",
+                          "text": "demon"
+                        },
+                        {
+                          "language": "en",
+                          "text": "pro"
+                        },
+                        {
+                          "id": "wizard",
+                          "language": "en",
+                          "text": "wizard"
+                        },
+                        {
+                          "id": "hotshot",
+                          "language": "en",
+                          "text": "hotshot"
+                        },
+                        {
+                          "language": "en",
+                          "text": "whizz"
+                        },
+                        {
+                          "language": "en",
+                          "text": "wiz"
+                        },
+                        {
+                          "language": "en",
+                          "text": "ninja"
+                        }
+                      ]
                     },
-                    "text": "sound"
+                    {
+                      "id": "id010024c4-ffb5-41eb-a594-8c27bb513c35",
+                      "regions": [
+                        {
+                          "id": "british",
+                          "text": "British"
+                        }
+                      ],
+                      "registers": [
+                        {
+                          "id": "informal",
+                          "text": "Informal"
+                        }
+                      ],
+                      "synonyms": [
+                        {
+                          "id": "dab_hand",
+                          "language": "en",
+                          "text": "dab hand"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "id0076c252-b5ab-4266-8ca8-bfa2af74d315",
+                      "regions": [
+                        {
+                          "id": "north_american",
+                          "text": "North American"
+                        }
+                      ],
+                      "registers": [
+                        {
+                          "id": "informal",
+                          "text": "Informal"
+                        }
+                      ],
+                      "synonyms": [
+                        {
+                          "language": "en",
+                          "text": "maven"
+                        },
+                        {
+                          "language": "en",
+                          "text": "crackerjack"
+                        }
+                      ]
+                    }
+                  ],
+                  "synonyms": [
+                    {
+                      "id": "expert",
+                      "language": "en",
+                      "text": "expert"
+                    },
+                    {
+                      "id": "master",
+                      "language": "en",
+                      "text": "master"
+                    },
+                    {
+                      "id": "genius",
+                      "language": "en",
+                      "text": "genius"
+                    },
+                    {
+                      "id": "virtuoso",
+                      "language": "en",
+                      "text": "virtuoso"
+                    },
+                    {
+                      "id": "maestro",
+                      "language": "en",
+                      "text": "maestro"
+                    },
+                    {
+                      "id": "professional",
+                      "language": "en",
+                      "text": "professional"
+                    },
+                    {
+                      "id": "adept",
+                      "language": "en",
+                      "text": "adept"
+                    },
+                    {
+                      "id": "past_master",
+                      "language": "en",
+                      "text": "past master"
+                    },
+                    {
+                      "language": "en",
+                      "text": "doyen"
+                    },
+                    {
+                      "id": "champion",
+                      "language": "en",
+                      "text": "champion"
+                    },
+                    {
+                      "id": "star",
+                      "language": "en",
+                      "text": "star"
+                    },
+                    {
+                      "id": "winner",
+                      "language": "en",
+                      "text": "winner"
+                    }
+                  ]
                 }
-            ],
-            "type": "headword",
-            "word": "sound"
+              ]
+            }
+          ],
+          "language": "en-gb",
+          "lexicalCategory": {
+            "id": "noun",
+            "text": "Noun"
+          },
+          "text": "ace"
         },
         {
-            "id": "sound",
-            "language": "en-us",
-            "lexicalEntries": [
+          "entries": [
+            {
+              "senses": [
                 {
-                    "entries": [
-                        {
-                            "homographNumber": "200",
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "in good condition; not damaged, injured, or diseased"
-                                    ],
-                                    "id": "m_en_gbus0970170.007",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "financially secure"
-                                            ],
-                                            "id": "m_en_gbus0970170.011"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "based on reason, sense, or judgment"
-                                    ],
-                                    "id": "m_en_gbus0970170.015",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "competent, reliable, or holding acceptable views"
-                                            ],
-                                            "id": "m_en_gbus0970170.016"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "(of sleep) deep and undisturbed."
-                                    ],
-                                    "id": "m_en_gbus0970170.018",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "(of a person) tending to sleep deeply"
-                                            ],
-                                            "id": "m_en_gbus0970170.019"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "severe"
-                                    ],
-                                    "id": "m_en_gbus0970170.021"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-us",
-                    "lexicalCategory": {
-                        "id": "adjective",
-                        "text": "Adjective"
+                  "antonyms": [
+                    {
+                      "id": "mediocre",
+                      "language": "en",
+                      "text": "mediocre"
                     },
-                    "text": "sound"
-                },
-                {
-                    "entries": [
+                    {
+                      "id": "amateurish",
+                      "language": "en",
+                      "text": "amateurish"
+                    }
+                  ],
+                  "examples": [
+                    {
+                      "text": "an ace tennis player"
+                    }
+                  ],
+                  "id": "t_en_gb0000173.002",
+                  "registers": [
+                    {
+                      "id": "informal",
+                      "text": "Informal"
+                    }
+                  ],
+                  "subsenses": [
+                    {
+                      "id": "iddf44dc3b-ce44-4a1e-b93c-fc725238ef2c",
+                      "registers": [
                         {
-                            "homographNumber": "201",
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "soundly"
-                                    ],
-                                    "id": "m_en_gbus0970170.023"
-                                }
-                            ]
+                          "id": "informal",
+                          "text": "Informal"
                         }
-                    ],
-                    "language": "en-us",
-                    "lexicalCategory": {
-                        "id": "adverb",
-                        "text": "Adverb"
+                      ],
+                      "synonyms": [
+                        {
+                          "id": "great",
+                          "language": "en",
+                          "text": "great"
+                        },
+                        {
+                          "id": "terrific",
+                          "language": "en",
+                          "text": "terrific"
+                        },
+                        {
+                          "id": "tremendous",
+                          "language": "en",
+                          "text": "tremendous"
+                        },
+                        {
+                          "id": "superb",
+                          "language": "en",
+                          "text": "superb"
+                        },
+                        {
+                          "id": "fantastic",
+                          "language": "en",
+                          "text": "fantastic"
+                        },
+                        {
+                          "language": "en",
+                          "text": "stellar"
+                        },
+                        {
+                          "id": "sensational",
+                          "language": "en",
+                          "text": "sensational"
+                        },
+                        {
+                          "id": "fabulous",
+                          "language": "en",
+                          "text": "fabulous"
+                        },
+                        {
+                          "language": "en",
+                          "text": "fab"
+                        },
+                        {
+                          "id": "crack",
+                          "language": "en",
+                          "text": "crack"
+                        },
+                        {
+                          "id": "hotshot",
+                          "language": "en",
+                          "text": "hotshot"
+                        },
+                        {
+                          "language": "en",
+                          "text": "A1"
+                        },
+                        {
+                          "id": "mean",
+                          "language": "en",
+                          "text": "mean"
+                        },
+                        {
+                          "language": "en",
+                          "text": "demon"
+                        },
+                        {
+                          "id": "awesome",
+                          "language": "en",
+                          "text": "awesome"
+                        },
+                        {
+                          "id": "magic",
+                          "language": "en",
+                          "text": "magic"
+                        },
+                        {
+                          "id": "wicked",
+                          "language": "en",
+                          "text": "wicked"
+                        },
+                        {
+                          "language": "en",
+                          "text": "tip-top"
+                        },
+                        {
+                          "id": "top-notch",
+                          "language": "en",
+                          "text": "top-notch"
+                        }
+                      ]
                     },
-                    "text": "sound"
+                    {
+                      "id": "ide6b69570-dfd4-4f5c-b4d9-c43bb67b96c7",
+                      "regions": [
+                        {
+                          "id": "british",
+                          "text": "British"
+                        }
+                      ],
+                      "registers": [
+                        {
+                          "id": "informal",
+                          "text": "Informal"
+                        }
+                      ],
+                      "synonyms": [
+                        {
+                          "id": "brilliant",
+                          "language": "en",
+                          "text": "brilliant"
+                        },
+                        {
+                          "language": "en",
+                          "text": "brill"
+                        },
+                        {
+                          "id": "smashing",
+                          "language": "en",
+                          "text": "smashing"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "id0a91a76f-eabc-4c58-ba79-9ad46a4be3ba",
+                      "regions": [
+                        {
+                          "id": "north_american",
+                          "text": "North American"
+                        }
+                      ],
+                      "registers": [
+                        {
+                          "id": "informal",
+                          "text": "Informal"
+                        }
+                      ],
+                      "synonyms": [
+                        {
+                          "language": "en",
+                          "text": "badass"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "id9dcec8bc-7432-4d69-8016-5527f2b6fa01",
+                      "registers": [
+                        {
+                          "id": "vulgar_slang",
+                          "text": "Vulgar Slang"
+                        }
+                      ],
+                      "synonyms": [
+                        {
+                          "language": "en",
+                          "text": "shit-hot"
+                        }
+                      ]
+                    }
+                  ],
+                  "synonyms": [
+                    {
+                      "id": "excellent",
+                      "language": "en",
+                      "text": "excellent"
+                    },
+                    {
+                      "language": "en",
+                      "text": "very good"
+                    },
+                    {
+                      "id": "first-rate",
+                      "language": "en",
+                      "text": "first-rate"
+                    },
+                    {
+                      "id": "first-class",
+                      "language": "en",
+                      "text": "first-class"
+                    },
+                    {
+                      "id": "marvellous",
+                      "language": "en",
+                      "text": "marvellous"
+                    },
+                    {
+                      "id": "wonderful",
+                      "language": "en",
+                      "text": "wonderful"
+                    },
+                    {
+                      "id": "magnificent",
+                      "language": "en",
+                      "text": "magnificent"
+                    },
+                    {
+                      "id": "outstanding",
+                      "language": "en",
+                      "text": "outstanding"
+                    },
+                    {
+                      "id": "superlative",
+                      "language": "en",
+                      "text": "superlative"
+                    },
+                    {
+                      "id": "formidable",
+                      "language": "en",
+                      "text": "formidable"
+                    },
+                    {
+                      "id": "virtuoso",
+                      "language": "en",
+                      "text": "virtuoso"
+                    },
+                    {
+                      "id": "masterly",
+                      "language": "en",
+                      "text": "masterly"
+                    },
+                    {
+                      "id": "expert",
+                      "language": "en",
+                      "text": "expert"
+                    },
+                    {
+                      "language": "en",
+                      "text": "champion"
+                    },
+                    {
+                      "id": "fine",
+                      "language": "en",
+                      "text": "fine"
+                    },
+                    {
+                      "id": "consummate",
+                      "language": "en",
+                      "text": "consummate"
+                    },
+                    {
+                      "id": "skilful",
+                      "language": "en",
+                      "text": "skilful"
+                    },
+                    {
+                      "id": "adept",
+                      "language": "en",
+                      "text": "adept"
+                    }
+                  ]
                 }
-            ],
-            "type": "headword",
-            "word": "sound"
-        },
-        {
-            "id": "sound",
-            "language": "en-us",
-            "lexicalEntries": [
-                {
-                    "entries": [
-                        {
-                            "homographNumber": "300",
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "ascertain (the depth of water), typically by means of a line or pole or using sound echoes."
-                                    ],
-                                    "id": "m_en_gbus0970180.007",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "examine (a person's bladder or other internal cavity) with a long surgical probe."
-                                            ],
-                                            "id": "m_en_gbus0970180.014"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "question (someone), typically in a cautious or discreet way, as to their opinions or feelings on a subject"
-                                    ],
-                                    "id": "m_en_gbus0970180.016",
-                                    "subsenses": [
-                                        {
-                                            "definitions": [
-                                                "inquire into (someone's opinions of feelings) in a cautious way"
-                                            ],
-                                            "id": "m_en_gbus0970180.017"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "definitions": [
-                                        "(especially of a whale) dive down steeply to a great depth."
-                                    ],
-                                    "id": "m_en_gbus0970180.021"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-us",
-                    "lexicalCategory": {
-                        "id": "verb",
-                        "text": "Verb"
-                    },
-                    "text": "sound"
-                },
-                {
-                    "entries": [
-                        {
-                            "homographNumber": "301",
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "a long surgical probe, typically with a curved, blunt end."
-                                    ],
-                                    "id": "m_en_gbus0970180.023"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-us",
-                    "lexicalCategory": {
-                        "id": "noun",
-                        "text": "Noun"
-                    },
-                    "text": "sound"
-                }
-            ],
-            "type": "headword",
-            "word": "sound"
-        },
-        {
-            "id": "sound",
-            "language": "en-us",
-            "lexicalEntries": [
-                {
-                    "entries": [
-                        {
-                            "homographNumber": "400",
-                            "senses": [
-                                {
-                                    "definitions": [
-                                        "a narrow stretch of water forming an inlet or connecting two wider areas of water such as two seas or a sea and a lake."
-                                    ],
-                                    "id": "m_en_gbus0970190.003"
-                                }
-                            ]
-                        }
-                    ],
-                    "language": "en-us",
-                    "lexicalCategory": {
-                        "id": "noun",
-                        "text": "Noun"
-                    },
-                    "text": "sound"
-                }
-            ],
-            "type": "headword",
-            "word": "sound"
+              ]
+            }
+          ],
+          "language": "en-gb",
+          "lexicalCategory": {
+            "id": "adjective",
+            "text": "Adjective"
+          },
+          "text": "ace"
         }
-    ],
-    "word": "sound"
+      ],
+      "type": "headword",
+      "word": "ace"
+    }
+  ],
+  "word": "ace"
 }
