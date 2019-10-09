@@ -1,27 +1,15 @@
-const QUERY = document.getElementById("query");
-const DEF_LIST = document.getElementsByClassName("definitions");
+document.addEventListener("DOMContentLoaded", function(){
 
-function processForm(e) {
-    if (e.preventDefault) e.preventDefault();
-    let entry = document.createElement("li");
-    entry.appendChild(document.createTextNode("definition 1"));
-    DEF_LIST.appendChild(entry);
-    console.log("hello");
-    return false;
-}
-/*
-window.addEventListener("load",function() {
-    QUERY.onsubmit=function() {
+    const QUERY_BOX = document.getElementById("query");
+    const DEF_LIST = document.getElementById("definitions");
+  
+    function queried(e) {
+        e.preventDefault();
+        var queryValue = document.getElementsByTagName("input")[0].value
         let entry = document.createElement("li");
-        entry.appendChild(document.createTextNode("definition 1"));
+        entry.appendChild(document.createTextNode(queryValue));
         DEF_LIST.appendChild(entry);
     }
-});
-*/
-document.addEventListener("DOMContentLoaded", function(){
-    if (QUERY.attachEvent) {
-        QUERY.attachEvent("submit", processForm);
-    } else {
-        QUERY.addEventListener("submit", processForm);
-    }
+  
+    QUERY_BOX.addEventListener("submit", queried);
 });
