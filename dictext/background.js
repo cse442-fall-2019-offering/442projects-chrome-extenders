@@ -11,6 +11,18 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   });
 });
 
+chrome.runtime.onConnect.addListener(function(portFrom) {
+   if(portFrom.name === 'background-content') {
+      //This is how you add listener to a port.
+      portFrom.onMessage.addListener(function(message) {
+         //Do something to this message(offsetheight and width)
+      });
+   }
+});
+
+//testing to get DOM data
+chrome.tabs.sendMessage(YOUR_TARGET_TAB_ID, {action: 'GET_DIMENSION'})
+
 // This block is new!
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.message === "open_popup") {
