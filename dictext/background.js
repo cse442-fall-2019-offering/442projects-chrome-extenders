@@ -5,10 +5,15 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   // Send a message to the active tab
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     var activeTab = tabs[0];
+    var url=activeTab.url;
+    var subject=activeTab.subject;
+    var body= activeTab.body;
+
     chrome.tabs.sendMessage(activeTab.id, {
       message: "clicked_browser_action"
     });
   });
+
 });
 
 // This block is new!
@@ -16,7 +21,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.message === "open_popup") {
     chrome.windows.create(
       {
-        url: chrome.extension.getURL("dictwin.html"),
+        url: chrome.extension.getURL("srch.html"),
         type: "panel",
         focused: true,
         top: 60,
@@ -31,4 +36,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       }
     );
   }
+
+
 });
