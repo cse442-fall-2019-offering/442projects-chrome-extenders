@@ -24,6 +24,10 @@ def get_definitions(word):
     r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key})
     data = json.loads(r.text)
 
+    if "error" in data:
+        def_array = {}
+        return def_array
+
     # definitions
     senses_array = data['results'][0]['lexicalEntries'][0]['entries'][0]['senses']
 
@@ -54,6 +58,10 @@ def get_synonyms_and_antonyms(word):
 
     r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key})
     data = json.loads(r.text)
+
+    if "error" in data:
+        t_array = {}
+        return t_array
 
     senses_array = data['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]
     synonyms = []
@@ -91,6 +99,10 @@ def get_example(word):
 
     r = requests.get(url, headers={'app_id': app_id, 'app_key': app_key})
     data = json.loads(r.text)
+
+    if "error" in data:
+        ex_array = {}
+        return ex_array
 
     one_example = [str(data['results'][0]['lexicalEntries'][0]['sentences'][0]['text'])]
 
