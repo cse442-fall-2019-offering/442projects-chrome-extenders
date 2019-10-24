@@ -3,9 +3,12 @@ sys.path.insert(1, "../api")
 import api
 
 if __name__ == "__main__":
+
+    # check if keysmashing doens't break code :)
     i = input("Input word here: ")
     a = api.get_definitions(i)
     print(a)
+
 
     word = "different"
 
