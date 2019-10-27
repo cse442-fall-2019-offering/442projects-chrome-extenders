@@ -47,10 +47,3 @@ if __name__ == "__main__":
 
     # get all requests in single data struct
     api.results(word)
-
-    # request to project api test
-    req = project_request(word)
-    if req.status_code == 200:
-        print("request passed")
-    else:
-        print("request failed")
