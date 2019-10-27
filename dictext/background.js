@@ -28,7 +28,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.message === "open_popup") {
     chrome.windows.create(
       {
-        url: chrome.extension.getURL("dictwin.html"),
+        url: chrome.extension.getURL("srch.html"),
         type: "panel",
         focused: true,
         top: 60,
@@ -44,3 +44,5 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     );
   }
 });
+
+// test change hehe
