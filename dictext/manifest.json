@@ -14,5 +14,16 @@
   ],
   "browser_action": {
     "default_icon": "logo.png"
+  },
+  "commands": {
+    "check-highlight": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+9",
+        "windows": "Ctrl+Shift+9",
+        "mac": "Command+Shift+9"
+      },
+      "description": "Lookup highlighted text",
+      "global": true
+    }
   }
 }
