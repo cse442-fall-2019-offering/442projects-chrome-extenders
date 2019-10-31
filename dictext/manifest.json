@@ -15,7 +15,8 @@
     }
   ],
   "browser_action": {
-    "default_icon": "logo.png"
+    "default_icon": "logo.png",
+    "default_popup": "popup.html" 
   },
   "commands": {
     "check-highlight": {
@@ -25,7 +26,10 @@
         "mac": "Command+Shift+9"
       },
       "description": "Lookup highlighted text",
-      "global": true
+      "global": true,
+      "selectedText" : {
+        "description": "Retrieve the selected text in the active tab"
+      }
     }
   }
 }
