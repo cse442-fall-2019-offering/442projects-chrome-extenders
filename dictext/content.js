@@ -14,15 +14,6 @@
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	console.log(request);
-	//DOM
-    if (request.message === "getSelection"){
-    	console.log("here");
-		var selection = window.getSelectionHTML(); 
-		sendResponse({body: selection, url: window.location.href, subject: document.title});
-	}
-    else
-		sendResponse({}); // snub them.  
-
 	if (request.message === "clicked_browser_action") {
     var firstHref = $("a[href^='http']")
       .eq(0)
@@ -32,3 +23,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     chrome.runtime.sendMessage({ message: "open_popup", url: firstHref });  
   }
 });
+
+chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+    if (request.method == "getSelection")
+      sendResponse({data: window.getSelection().toString()});
+    else
+      sendResponse({}); // snub them.
+});
+
