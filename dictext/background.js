@@ -1,7 +1,7 @@
-// https://developer.chrome.com/extensions/windows#type-CreateType
 
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
+  sendMessage();
   // Send a message to the active tab
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     var activeTab = tabs[0];
@@ -10,6 +10,12 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     });
   });
 });
+
+function sendMessage() {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+    chrome.tabs.sendMessage(tabs[0].id, {action: "getText"}, function(response) {});
+  });
+}
 
 // This block is new!
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
@@ -32,8 +38,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     );
   }
 });
-
-// test change hehe
 
 // keyboard shortcut event
 chrome.commands.onCommand.addListener(function(command) {
