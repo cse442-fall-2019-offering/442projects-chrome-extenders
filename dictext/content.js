@@ -1,28 +1,21 @@
-// content.js
-let contentPort = chrome.runtime.connect({
-   name: 'background-content'
+function hasText() {
+  var highlightedText = window.getSelection().toString();
+  console.log(highlightedText)
+}
+
+chrome.extension.onMessage.addListener(function(msg, sender, sendResponse) {
+  if (msg.action === "getText") {
+    hasText();
+  }
 });
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  if (request.message === "clicked_browser_action") {
+	console.log(request);
+	if (request.message === "clicked_browser_action") {
     var firstHref = $("a[href^='http']")
       .eq(0)
       .attr("href");
-
-    console.log(firstHref);
-
-    // This line is new!
-    chrome.runtime.sendMessage({ message: "open_popup", url: firstHref });
+    chrome.runtime.sendMessage({ message: "open_popup", url: firstHref });  
   }
-
-  if(message.action === 'GET_DIMENSION') {
-      contentPort.postMessage({
-         type: 'DIMENSION', 
-         payload: {
-            dimension: document.body.offsetHeight     
-         }
-      });
-   }
-
 });
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html> 
 <html>
+<<<<<<< HEAD
   <head>
     <script src="jquery-1.8.3.min.js"></script>
     <script src="popup.js"></script>
@@ -12,4 +13,26 @@
     <textarea id="text"> </textarea>
     <button id="paste">Paste Selection</button>
   </body>
+=======
+<head>
+<style>
+  body { width: 300px; }
+  textarea { width: 250px; height: 100px;}
+</style>
+<script>
+function pasteSelection() {
+  chrome.tabs.getSelected(null, function(tab) {
+    chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function (response) {
+      var text = document.getElementById('text'); 
+      text.innerHTML = response.data;
+    });
+  });
+}
+</script>
+</head>
+<body>
+<textarea id="text"> </textarea>
+<button onclick="pasteSelection(); ">Paste Selection</button>
+</body>
+>>>>>>> DOM
 </html>

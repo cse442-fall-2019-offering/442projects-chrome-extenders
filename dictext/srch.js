@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const SYN_LIST = document.getElementById("synonyms");
   const ERROR = document.getElementById("errorBox");
 
+<<<<<<< HEAD
   function queried(e) {
     e.preventDefault();
     DEF_LIST.innerHTML = "";
@@ -54,4 +55,37 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   QUERY_BOX.addEventListener("submit", queried);
+=======
+    const QUERY_BOX = document.getElementById("query");
+    const DEF_LIST = document.getElementById("definitions");
+    const SYN_LIST = document.getElementById("synonyms");
+    //const ANT_LIST = document.getElementByID("antonyms");
+
+    function queried(e) {
+        e.preventDefault();
+        let queryValue = document.getElementsByTagName("input")[0].value;
+
+        // definitions
+        let entry = document.createElement("li");
+        console.log("1");
+        let response = get_request(queryValue);
+        console.log(response.defintions[0]);
+        entry.appendChild(document.createTextNode(response.defintions[0]));
+        DEF_LIST.appendChild(entry);
+
+        // synonyms
+        entry = document.createElement("li");
+        console.log("2");
+        entry.appendChild(document.createTextNode(response.synonyms[0]));
+        SYN_LIST.appendChild(entry);
+
+        // // antonyms
+        // entry = document.createElement("li");
+        // console.log("3");
+        // entry.appendChild(document.createTextNode(response.antonyms[0]));
+        // ANT_LIST.appendChild(entry);
+    }
+
+    QUERY_BOX.addEventListener("submit", queried);
+>>>>>>> DOM
 });

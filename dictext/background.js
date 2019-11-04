@@ -1,7 +1,6 @@
-// https://developer.chrome.com/extensions/windows#type-CreateType
-
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
+  sendMessage();
   // Send a message to the active tab
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     var activeTab = tabs[0];
@@ -11,17 +10,12 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   });
 });
 
-chrome.runtime.onConnect.addListener(function(portFrom) {
-   if(portFrom.name === 'background-content') {
-      //This is how you add listener to a port.
-      portFrom.onMessage.addListener(function(message) {
-         //Do something to this message(offsetheight and width)
-      });
-   }
-});
+function sendMessage() {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+    chrome.tabs.sendMessage(tabs[0].id, {action: "getText"}, function(response) {});
+  });
+}
 
-//testing to get DOM data
-chrome.tabs.sendMessage(YOUR_TARGET_TAB_ID, {action: 'GET_DIMENSION'})
 
 // This block is new!
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
@@ -45,4 +39,14 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   }
 });
 
-// test change hehe
+// keyboard shortcut event
+chrome.commands.onCommand.addListener(function(command) {
+  console.log('Command:', command);
+  // Send a message to the active tab
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    var activeTab = tabs[0];
+    chrome.tabs.sendMessage(activeTab.id, {
+      message: "clicked_browser_action"
+    });
+  });
+});
