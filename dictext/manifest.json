@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "dictext",
+  "version": "0.1",
+  "permissions": ["tabs", "storage", "activeTab", "declarativeContent", "clipboardRead"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.4.1.min.js", "content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "browser_action": {
+  },
+  "commands": {
+    "check-highlight": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+9",
+        "windows": "Ctrl+Shift+9",
+        "mac": "Command+Shift+9"
+      },
+      "description": "Lookup highlighted text",
+      "global": true,
+      "selectedText" : {
+        "description": "Retrieve the selected text in the active tab"
+      }
+    }
+  }
+}
