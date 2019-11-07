@@ -1,4 +1,21 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html>
+<head>
+<title> Welcome to Dictext</title>
+</head>
+<body>
+
+<h1>Dictext!</h1>
+<img src="logo.png" alt="logo" align="center" style="width:60px;height:60px;">
+<p>Using dictext is easy, simply highlight a word and search it in the bar.</p>
+<p>Dictext returns definitions, synonyms/antonyms, as well as an example of the word used.</p>
+<p>More information can be found at...</p>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -9,7 +26,7 @@
 function pasteSelection() {
   chrome.tabs.getSelected(null, function(tab) {
     chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function (response) {
-      var text = document.getElementById('text'); 
+      var text = document.getElementById('text');
       text.innerHTML = response.data;
     });
   });
@@ -20,4 +37,4 @@ function pasteSelection() {
 <textarea id="text"> </textarea>
 <button onclick="pasteSelection(); ">Paste Selection</button>
 </body>
-</html>
+</html> -->
