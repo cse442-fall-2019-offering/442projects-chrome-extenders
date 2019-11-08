@@ -5,7 +5,6 @@ import requests
 import os
 import json
 from config import *
-import pprint
 
 
 def get_definitions(word):
