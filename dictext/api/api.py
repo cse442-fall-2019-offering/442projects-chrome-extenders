@@ -110,6 +110,9 @@ def get_example(word):
     # print(example_kvp)
     return example_kvp
 
+def get_translations(word):
+    return 0
+
 #puts all of the returned data into one data struct to be called by word_request.py
 def results(word):
     results = {}
