@@ -4,10 +4,10 @@
 import api
 
 from flask import Flask
-# from flask_cors import CORS
+from flask_cors import CORS
 
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 
 
 @app.route('/api/<word>')
@@ -25,3 +25,7 @@ def get_thesaurus(word):
 @app.route('/api/example/<word>')
 def get_ex(word):
     return api.get_example(word)
+
+@app.route('/api/translation/<word>')
+def get_translation(word):
+    return api.translation_request(word)

@@ -109,9 +109,6 @@ def get_example(word):
     # print(example_kvp)
     return example_kvp
 
-def get_translations(word):
-    return 0
-
 #puts all of the returned data into one data struct to be called by word_request.py
 def results(word):
     results = {}
@@ -120,3 +117,28 @@ def results(word):
     results.update(get_example(word))
     print(results)
     return results
+
+def translation_request(word):
+
+    header = {
+        'Ocp-Apim-Subscription-Key': azure_key,
+        'Content-Type': 'application/json; charset=UTF-8'
+    }
+
+    # translations come in the order: spanish, french, italian
+    url = 'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from=en&to=es&to=fr&to=it'
+
+    data = '[{"Text": "%s"}]' % word
+    # print(data)
+
+    r = requests.post(url, data=data, headers=header)
+    translation_json = json.loads(r.text)
+
+    spanish = translation_json[0]['translations'][0]['text']
+    french = translation_json[0]['translations'][1]['text']
+    italian = translation_json[0]['translations'][2]['text']
+    lang_kvp = {"spanish": spanish, "french": french, "italian": italian}
+
+    languages = {"languages": lang_kvp}
+    # translations_kvp = {"translations":}
+    return languages    
