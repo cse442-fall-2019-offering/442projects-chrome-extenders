@@ -25,3 +25,7 @@ def get_thesaurus(word):
 @app.route('/api/example/<word>')
 def get_ex(word):
     return api.get_example(word)
+
+@app.route('/api/translation/<word>')
+def get_translation(word):
+    return api.translation_request(word)
