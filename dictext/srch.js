@@ -1,5 +1,7 @@
 const Http = new XMLHttpRequest();
-const url = "http://127.0.0.1:5000/api/";
+const url = "http://35.174.105.25/api/";
+
+// /api/translation for translations
 
 function get_request(wrd) {
   Http.open("GET", url + wrd, false);
@@ -23,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const SYN_LIST = document.getElementById("synonyms");
   const ERROR = document.getElementById("errorBox");
 
-<<<<<<< HEAD
   function queried(e) {
     e.preventDefault();
     DEF_LIST.innerHTML = "";
@@ -55,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   QUERY_BOX.addEventListener("submit", queried);
-=======
     const QUERY_BOX = document.getElementById("query");
     const DEF_LIST = document.getElementById("definitions");
     const SYN_LIST = document.getElementById("synonyms");
@@ -87,5 +87,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     QUERY_BOX.addEventListener("submit", queried);
->>>>>>> DOM
 });
