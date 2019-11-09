@@ -9,9 +9,6 @@ if __name__ == "__main__":
     a = api.get_definitions(i)
     print(a)
 
-# hello
-
-
     word = "different"
 
     # defintions test
