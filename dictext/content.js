@@ -1,8 +1,3 @@
-chrome.runtime.sendMessage({
-  from: 'content',
-  subject: 'showPageAction',
-});
-
 // Get the highlighted text on the page and return it directly to the message sender
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "getText") {
