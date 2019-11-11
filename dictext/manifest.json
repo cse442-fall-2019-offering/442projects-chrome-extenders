@@ -3,27 +3,40 @@
   "name": "dictext",
   "version": "0.1",
   "permissions": ["tabs", "storage", "activeTab", "declarativeContent", "clipboardRead"],
+  
   "background": {
+    "persistent": false,
     "scripts": ["background.js"]
   },
+
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["jquery-3.4.1.min.js", "content.js"],
-      "run_at": "document_start",
-      "all_frames": true
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
     }
   ],
+
   "browser_action": {
+    "default_title": "dictext.io",
+    "default_popup": "srch.html",
+    "default_icon": {
+      "19": "logo.png",
+      "38": "logo.png"
+    }
   },
+  
   "commands": {
     "check-highlight": {
+      "default_title": "dictext.io",
+      "default_popup": "srch.html",
       "suggested_key": {
         "default": "Ctrl+Shift+9",
         "windows": "Ctrl+Shift+9",
         "mac": "Command+Shift+9"
       },
-      "description": "Lookup highlighted text",
+      "description": "Open the dictionary extension",
       "global": true,
       "selectedText" : {
         "description": "Retrieve the selected text in the active tab"

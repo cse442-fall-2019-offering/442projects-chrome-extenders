@@ -1,12 +1,3 @@
-// Ask the active tab if theres any highlighted text
-function queryForHighlighted () {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      chrome.tabs.sendMessage(tabs[0].id, {
-          action: "getText"
-      }, (response) => response.text);
-  });
-}
-
 // Create a window for looking up dictionary definitions and displaying results
 function createDictWindow () {
   chrome.windows.create(

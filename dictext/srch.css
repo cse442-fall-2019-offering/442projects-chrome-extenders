@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-h3 {
-    color: red
-}
-=======
 /* background color */
 body {background-color: SkyBlue;}
 
@@ -10,4 +5,7 @@ body {background-color: SkyBlue;}
 p {
   font-family: "Helvetica", Times, serif;
 }
->>>>>>> DOM
+
+h3 {
+    color: red
+}
