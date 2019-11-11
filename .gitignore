@@ -1,2 +1,7 @@
-/dictext/unit-tests/config.py
 /dictext/unit-tests/venv/*
+/dictext/api/__pycache__/*
+/dictext/unit-tests/config.py
+
+/dictext/api/venv/*
+/dictext/api/__pycache__/*
+/dictext/api/config.py

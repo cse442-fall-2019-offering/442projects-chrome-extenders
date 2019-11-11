@@ -1,21 +1,9 @@
-function hasText() {
-  var highlightedText = window.getSelection().toString();
-  console.log(highlightedText)
-}
-
-chrome.extension.onMessage.addListener(function(msg, sender, sendResponse) {
-  if (msg.action === "getText") {
-    hasText();
+// Get the highlighted text on the page and return it directly to the message sender
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === "getText") {
+    let highlightedText = window.getSelection().toString();
+    sendResponse({
+      text: highlightedText
+    });
   }
 });
-
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-	console.log(request);
-	if (request.message === "clicked_browser_action") {
-    var firstHref = $("a[href^='http']")
-      .eq(0)
-      .attr("href");
-    chrome.runtime.sendMessage({ message: "open_popup", url: firstHref });  
-  }
-});
-
