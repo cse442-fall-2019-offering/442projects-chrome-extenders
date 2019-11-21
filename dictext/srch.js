@@ -37,6 +37,14 @@ function get_request(wrd) {
     });
 }
 
+function get_translation(wrd){
+    return new Promise((resolve, reject) => {
+        Http.open("GET", url + "translation/" + wrd, false);
+        Http.send();
+        resolve(JSON.parse(Http.responseText));
+    });
+}
+
 function fill_fields(response) {
     if (!Object.keys(response).length) {
         let entry = document.createElement("h3");
