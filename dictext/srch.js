@@ -2,7 +2,7 @@ const Http = new XMLHttpRequest();
 // const url = "http://35.174.105.25/api/";
 const url = "http://127.0.0.1:5000/api/";
 
-const QUERY_BOX = document.getElementById("query");
+// const QUERY_BOX = document.getElementById("query");
 const DEF_LIST = document.getElementById("definitions");
 const SYN_LIST = document.getElementById("synonyms");
 const ANT_LIST = document.getElementById("antonyms");
@@ -13,6 +13,8 @@ const ERROR = document.getElementById("errorBox");
 // /api/translation for translations
 
 var Initial_Value = 1;
+
+queried();
 
 function queryForHighlighted() {
   if (Initial_Value) {
@@ -83,8 +85,8 @@ function fill_fields(response) {
   }
 }
 
-function queried(e) {
-  e.preventDefault();
+function queried() {
+//   e.preventDefault();
   DEF_LIST.innerHTML = "";
   SYN_LIST.innerHTML = "";
   ANT_LIST.innerHTML = "";
@@ -92,13 +94,25 @@ function queried(e) {
   ERROR.innerHTML = "";
   TRANSLATION.innerHTML = "";
 
-  queryForHighlighted().then(response => {
-    get_request(response.text).then(gotten => {
-      fill_fields(gotten);
-    });
-  });
+  searchText = document.getElementById("search").value;
+  if(searchText == ""){
+    queryForHighlighted().then(response => {
+        get_request(response.text).then(gotten => {
+          fill_fields(gotten);
+        });
+      });
+  }else{
+      get_request(searchText).then(gotten => {
+          fill_fields(gotten);
+      })
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  QUERY_BOX.addEventListener("submit", queried);
+    document.addEventListener("keydown", (event) => {
+        if (event.code == "Enter"){
+            queried();
+        }
+    })
+    //document.getElementById("search").addEventListener("oninput", queried);
 });

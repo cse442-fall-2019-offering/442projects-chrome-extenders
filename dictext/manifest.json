@@ -28,7 +28,7 @@
   },
   
   "commands": {
-    "check-highlight": {
+    "Open the Dictionary": {
       "default_title": "dictext.io",
       "default_popup": "srch.html",
       "suggested_key": {
@@ -36,7 +36,7 @@
         "windows": "Ctrl+Shift+9",
         "mac": "Command+Shift+9"
       },
-      "description": "Open the dictionary extension",
+      "description": "Open the Dictionary",
       "global": true,
       "selectedText" : {
         "description": "Retrieve the selected text in the active tab"
