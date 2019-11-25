@@ -112,9 +112,13 @@ def get_example(word):
 #puts all of the returned data into one data struct to be called by word_request.py
 def results(word):
     results = {}
+    if get_definitions(word) == {}:
+        return {}
+
     results.update(get_definitions(word))
     results.update(get_synonyms_and_antonyms(word))
     results.update(get_example(word))
+    results.update(translation_request(word))
     print(results)
     return results
 

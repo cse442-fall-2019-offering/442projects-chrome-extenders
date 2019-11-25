@@ -5,6 +5,7 @@ import api
 
 from flask import Flask
 from flask_cors import CORS
+from flask import jsonify
 
 app = Flask(__name__)
 CORS(app)
@@ -12,7 +13,7 @@ CORS(app)
 
 @app.route('/api/<word>')
 def get_word_data(word):
-    return api.results(word)
+    return jsonify(api.results(word))
 
 @app.route('/api/definition/<word>')
 def get_def(word):
