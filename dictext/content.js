@@ -7,3 +7,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     });
   }
 });
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === "print command heard") {
+    console.log("Command heard");
+  }
+});

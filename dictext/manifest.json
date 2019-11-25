@@ -5,7 +5,7 @@
   "permissions": ["tabs", "storage", "activeTab", "declarativeContent", "clipboardRead"],
   
   "background": {
-    "persistent": false,
+    "persistent": true,
     "scripts": ["background.js"]
   },
 
@@ -20,7 +20,6 @@
 
   "browser_action": {
     "default_title": "dictext.io",
-    "default_popup": "srch.html",
     "default_icon": {
       "19": "logo.png",
       "38": "logo.png"
@@ -28,19 +27,14 @@
   },
   
   "commands": {
-    "check-highlight": {
-      "default_title": "dictext.io",
-      "default_popup": "srch.html",
+    "Open the Dictionary": {
       "suggested_key": {
         "default": "Ctrl+Shift+9",
         "windows": "Ctrl+Shift+9",
         "mac": "Command+Shift+9"
       },
-      "description": "Open the dictionary extension",
-      "global": true,
-      "selectedText" : {
-        "description": "Retrieve the selected text in the active tab"
-      }
+      "description": "Open the Dictionary",
+      "global": true
     }
   }
 }

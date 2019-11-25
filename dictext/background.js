@@ -18,13 +18,28 @@ function createDictWindow () {
 }
 
 // Called when the user clicks on the browser action.
+
 chrome.browserAction.onClicked.addListener((tab) => {
-  queryForHighlighted();  // check if any text is highlighted
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, {
+        action: "print command heard"
+    }, (response) => {});
+  });
+  //queryForHighlighted();  // check if any text is highlighted
   createDictWindow();     // create window for dictionary items
 });
 
+
 // Called when the user uses the keyboard shortcut
-chrome.commands.onCommand.addListener((tab) => {
-  queryForHighlighted();  // check if any text is highlighted
-  createDictWindow();     // create window for dictionary items
+
+chrome.commands.onCommand.addListener((command) => {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, {
+        action: "print command heard"
+    }, (response) => {});
+  });
+  if (command == "Open the Dictionary") {
+    //queryForHighlighted();  // check if any text is highlighted
+    createDictWindow();     // create window for dictionary items
+  }
 });
