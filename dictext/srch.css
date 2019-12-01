@@ -1,10 +1,18 @@
 body {
- font-family: 'Lora', serif;
+	font-family: 'Lora', serif;
+	color: #474545;
+	border: 1px solid #a8cded;
+	padding: 5px;
 }
 
-h1, h2, h3, h4, h5, h6, select {
+h1, h2, select {
  font-family: 'Montserrat', sans-serif;
  font-weight: 300;
+}
+
+h3, h4, h5, h6 {
+	font-family: 'Lora', serif;
+	font-weight: 300;
 }
 
 figcaption {
@@ -12,12 +20,37 @@ figcaption {
  	font-size: 150%;
 }
 
-.searchBox{
+ol{
+	font-size: 110%
+}
+
+input[type=text] {
+	padding: 5px 5px;
+	border: none;
+	box-sizing: border-box;
+	border-bottom: 1px solid #a8cded;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	outline: none;
+	resize: none;
+}
+
+input[type=text]:focus {
+	border: 1px solid #474545;
+}
+
+.box{
 	border: 1px solid #a8cded;
+	border-style: none none solid none;
+	padding: 5px;
+}
+
+.searchBox{
 	padding: 5px;
 }
 
 .resultsBox{
 	border: 1px solid #a8cded;
+	border-style: none none solid none;
 	padding: 5px;
 }

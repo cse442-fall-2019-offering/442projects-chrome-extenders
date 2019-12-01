@@ -8,9 +8,9 @@
 
 <!-- dictext & logo -->
 <body>
-    <figure align="center" style="padding-bottom: 5%">
-        <img src="logo.png" alt="logo" style="width:60%;height:60%;">
-        <figcaption> dic{t}ext </figcaption>
+    <figure align="center" class="box">
+        <img src="logo.png" alt="logo" style="width:70%;height:70%;">
+        <figcaption> <strong> dic{t}ext </strong> </figcaption>
     </figure>
 
     <!-- search form and results portion -->
@@ -18,23 +18,23 @@
         <div class="searchBox">
             <h3> Enter a word: </h3>
             <input id="search" type="text" placeholder="Search" />
+            <br>
         </div>
-        <br>
         <div id="resultsBox" class="resultsBox">
         <div id="errorBox"></div>
-            <h4>Definitions:</h4>
+            <h3>Definitions:</h3>
             <ol id="definitions">
             </ol>
-            <h4>Synonyms:</h4>
+            <h3>Synonyms:</h3>
             <ol id="synonyms">
             </ol>
-            <h4>Antonyms:</h4>
+            <h3>Antonyms:</h3>
             <ol id="antonyms">
             </ol>
-            <h4>Example:</h4>
+            <h3>Example:</h3>
             <div id="example">
             </div>
-            <h4>Translate:</h4>
+            <h3>Translate:</h3>
             <select id="langSelect">
                 <option value="french">French</option>
                 <option value="italian">Italian</option>
