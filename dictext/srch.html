@@ -2,20 +2,25 @@
 <html>
 <head>
     <link rel='stylesheet' type='text/css' href='srch.css'/>
-    <!-- title on window -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
     <title>dictext.io</title>
 </head>
 
 <!-- dictext & logo -->
 <body>
-    <img src="logo.png" alt="logo" align="right" style="width:60px;height:60px;">
-    <h2>dictext</h2>
-    <h4>enter your word</h4>
+    <figure align="center" style="padding-bottom: 5%">
+        <img src="logo.png" alt="logo" style="width:60%;height:60%;">
+        <figcaption> dic{t}ext </figcaption>
+    </figure>
 
     <!-- search form and results portion -->
     <div class="searchBar">
-        <input id="search" type="text" placeholder="Search" />
-        <div id="resultsBox">
+        <div class="searchBox">
+            <h3> Enter a word: </h3>
+            <input id="search" type="text" placeholder="Search" />
+        </div>
+        <br>
+        <div id="resultsBox" class="resultsBox">
         <div id="errorBox"></div>
             <h4>Definitions:</h4>
             <ol id="definitions">

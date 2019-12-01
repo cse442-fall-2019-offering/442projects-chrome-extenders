@@ -1,11 +1,23 @@
-/* background color */
-body {background-color: SkyBlue;}
-
-/* fonts */
-p {
-  font-family: "Helvetica", Times, serif;
+body {
+ font-family: 'Lora', serif;
 }
 
-h3 {
-    color: red
+h1, h2, h3, h4, h5, h6, select {
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 300;
+}
+
+figcaption {
+	font-family: 'Montserrat', sans-serif;
+ 	font-size: 150%;
+}
+
+.searchBox{
+	border: 1px solid #a8cded;
+	padding: 5px;
+}
+
+.resultsBox{
+	border: 1px solid #a8cded;
+	padding: 5px;
 }
