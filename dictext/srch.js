@@ -87,8 +87,8 @@ function fill_fields(response) {
 
 function queried() {
 //   e.preventDefault();
-  //let loading = document.getElementById("loader");
-  //loading.style.display = loading.style.display == "none" ? "block" : "none";
+  let loading = document.getElementById("loader");
+  loading.style.display = "inline";
 
   DEF_LIST.innerHTML = "";
   SYN_LIST.innerHTML = "";
@@ -109,6 +109,8 @@ function queried() {
         fill_fields(gotten);
     });
   }
+
+  loading.style.display = "none";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
