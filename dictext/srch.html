@@ -2,38 +2,49 @@
 <html>
 <head>
     <link rel='stylesheet' type='text/css' href='srch.css'/>
-    <!-- title on window -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
     <title>dictext.io</title>
 </head>
 
 <!-- dictext & logo -->
 <body>
-    <img src="logo.png" alt="logo" align="right" style="width:50%;height:50%;">
-    <h2>dictext</h2>
-    <h4>enter your word</h4>
+    <figure align="center" class="box">
+        <img src="logo.png" alt="logo" style="width:70%;height:70%;">
+        <figcaption> <strong> dic{t}ext </strong> </figcaption>
+    </figure>
 
     <!-- search form and results portion -->
     <div class="searchBar">
-        <input id="search" type="text" placeholder="Search" />
-        <div id="resultsBox">
+        <div class="searchBox">
+            <h3> Enter a word: </h3>
+            <input id="search" type="text" placeholder="Search" />
+            <br>
+        </div>
+        <div id="resultsBox" class="resultsBox">
         <div id="errorBox"></div>
-            <h4>Definitions:</h4>
+            <h3>Definitions:</h3>
             <ol id="definitions">
             </ol>
-            <h4>Synonyms:</h4>
+            <h3>Synonyms:</h3>
             <ol id="synonyms">
             </ol>
-            <h4>Antonyms:</h4>
+            <h3>Antonyms:</h3>
             <ol id="antonyms">
             </ol>
-            <h4>Example:</h4>
+            <h3>Example:</h3>
             <div id="example">
             </div>
-            <h4>Translate:</h4>
+            <h3>Translate:</h3>
             <select id="langSelect">
                 <option value="french">French</option>
                 <option value="italian">Italian</option>
                 <option value="spanish">Spanish</option>
+                <option value="dutch">Dutch</option>
+                <option value="danish">Danish</option>
+                <option value="german">German</option>
+                <option value="arabic">Arabic</option>
+                <option value="chinese">Chinese</option>
+                <option value="japanese">Japanese</option>
             </select>
             <ol id="languages"></ol>
         </div>
