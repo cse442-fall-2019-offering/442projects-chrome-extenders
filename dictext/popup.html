@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- title for window -->
+<title> Welcome to Dictext</title>
+
+<!-- font style -->
+<style>
+p.a {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+</style>
+</head>
+<body>
+
+<!-- header -->
+<h1 style="font-family:verdana;">Dictext!</h1>
+
+<!-- description -->
+<p class="a">Using dictext is easy, simply highlight a word and enter it in the search bar.</p>
+<p class="a">Dictext returns definitions, synonyms, antonyms, and an example of the word's usage.</p>
+<p class="a">For more information, visit <a href="www.google.com">dictext.com</a></p>
+
+
+<!-- image -->
+<img src="logo.png" alt="logo" align="center" style="width:60px;height:60px;">
+
+<!-- script -->
+<!-- additional feature, we can open the dictext window via a button -->
+<button onclick="openWin()">open dictext window</button>
+
+<script>
+var myWindow;
+
+function openWin() {
+    myWindow = window.open("", "", "width=100, height=100");
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+
+<!-- Unsure what the below is from someone else, don't want to delete just in case. - Victor -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { width: 300px; }
+  textarea { width: 250px; height: 100px;}
+</style>
+<script>
+function pasteSelection() {
+  chrome.tabs.getSelected(null, function(tab) {
+    chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function (response) {
+      var text = document.getElementById('text');
+      text.innerHTML = response.data;
+    });
+  });
+}
+</script>
+</head>
+<body>
+<textarea id="text"> </textarea>
+<button onclick="pasteSelection(); ">Paste Selection</button>
+</body>
+</html> -->

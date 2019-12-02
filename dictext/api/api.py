@@ -70,7 +70,7 @@ def get_synonyms_and_antonyms(word):
         for i in senses_array['synonyms']:
             synonyms.append(i['text'])
 
-    thesaurus_kvp.update({"synonyms": synonyms})
+    thesaurus_kvp.update({"synonyms" : synonyms})
 
     if 'antonyms' in senses_array:
         for i in senses_array['antonyms']:
@@ -103,28 +103,20 @@ def get_example(word):
         ex_array = {}
         return ex_array
 
-    one_example = [str(data['results'][0]['lexicalEntries']
-                       [0]['sentences'][0]['text'])]
+    one_example = [str(data['results'][0]['lexicalEntries'][0]['sentences'][0]['text'])]
 
-    example_kvp = {"example": one_example}
+    example_kvp = {"example" : one_example}
     # print(example_kvp)
     return example_kvp
 
-# puts all of the returned data into one data struct to be called by word_request.py
-
-
+#puts all of the returned data into one data struct to be called by word_request.py
 def results(word):
     results = {}
-    if get_definitions(word) == {}:
-        return {}
-
     results.update(get_definitions(word))
     results.update(get_synonyms_and_antonyms(word))
     results.update(get_example(word))
-    results.update(translation_request(word))
     print(results)
     return results
-
 
 def translation_request(word):
 
@@ -134,7 +126,7 @@ def translation_request(word):
     }
 
     # translations come in the order: spanish, french, italian
-    url = 'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from=en&to=es&to=fr&to=it&to=nl&to=de&to=da&to=ar&to=zh-Hans&to=ja&to=tlh&textType=html'
+    url = 'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from=en&to=es&to=fr&to=it'
 
     data = '[{"Text": "%s"}]' % word
     # print(data)
@@ -145,15 +137,8 @@ def translation_request(word):
     spanish = translation_json[0]['translations'][0]['text']
     french = translation_json[0]['translations'][1]['text']
     italian = translation_json[0]['translations'][2]['text']
-    dutch = translation_json[0]['translations'][3]['text']
-    german = translation_json[0]['translations'][4]['text']
-    russian = translation_json[0]['translations'][5]['text']
-    arabic = translation_json[0]['translations'][6]['text']
-    chinese = translation_json[0]['translations'][7]['text']
-    japanese = translation_json[0]['translations'][8]['text']
-    lang_kvp = {"spanish": spanish, "french": french, "italian": italian, "dutch": dutch,
-                "german": german, "russian": russian, "arabic": arabic, "chinese": chinese, "japanese": japanese}
+    lang_kvp = {"spanish": spanish, "french": french, "italian": italian}
 
     languages = {"languages": lang_kvp}
     # translations_kvp = {"translations":}
-    return languages
+    return languages    
