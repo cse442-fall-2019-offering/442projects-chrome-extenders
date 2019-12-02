@@ -12,12 +12,7 @@ const ERROR = document.getElementById("errorBox");
 
 // /api/translation for translations
 
-var Initial_Value = 1;
-
-queried();
-
 function queryForHighlighted() {
-  if (Initial_Value) {
     return new Promise((resolve, reject) => {
       chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
         chrome.tabs.sendMessage(
@@ -31,9 +26,6 @@ function queryForHighlighted() {
         );
       });
     });
-  } else {
-    return document.getElementsByTagName("input")[0].value;
-  }
 }
 
 function get_request(wrd) {
@@ -111,14 +103,35 @@ function queried() {
   }
 }
 
+function openPage(page) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  document.getElementById(page).style.display = "inline";
+}
+
 document.addEventListener("DOMContentLoaded", function() {
+
+  defaultButt = document.getElementById("default");
+  nonDefaultButt = document.getElementById("nonDefault");
+
+  nonDefaultButt.addEventListener("click", function() {
+    openPage("infoTab");
+  });
+  defaultButt.addEventListener("click", function() {
+    openPage("searchTab");
+  });
   
+  openPage("searchTab");
+
   queryForHighlighted().then(response => {
     if (response.text != "") {
       queried();
     }
   });
-  
 
   document.addEventListener("keydown", (event) => {
     if (event.code == "Enter"){

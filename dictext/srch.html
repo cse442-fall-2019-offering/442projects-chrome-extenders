@@ -8,47 +8,56 @@
 
 <!-- dictext & logo -->
 <body>
-    <figure align="center" class="box">
-        <img src="logo.png" alt="logo" style="width:70%;height:70%;">
-        <figcaption> <strong> dic{t}ext </strong> </figcaption>
-    </figure>
+        <button class="tablink" id="default">Search</button>
+        <button class="tablink" id="nonDefault">Info</button>
+        <figure align="center" class="box">
+            <img src="logo.png" alt="logo" style="width:70%;height:70%;">
+            <figcaption> <strong> dic{t}ext </strong> </figcaption>
+        </figure>
 
-    <!-- search form and results portion -->
-    <div class="searchBar">
-        <div class="searchBox">
-            <h3> Enter a word: </h3>
-            <input id="search" type="text" placeholder="Search" />
-            <br>
-        </div>
-        <div id="resultsBox" class="resultsBox">
-        <div id="errorBox"></div>
-            <h3>Definitions:</h3>
-            <ol id="definitions">
-            </ol>
-            <h3>Synonyms:</h3>
-            <ol id="synonyms">
-            </ol>
-            <h3>Antonyms:</h3>
-            <ol id="antonyms">
-            </ol>
-            <h3>Example:</h3>
-            <div id="example">
+        <!-- search form and results portion -->
+        <div id="searchTab" class="tabcontent">
+        <div class="searchBar">
+            <div class="searchBox">
+                <h3> Enter a word: </h3>
+                <input id="search" type="text" placeholder="Search" />
+                <br>
             </div>
-            <h3>Translate:</h3>
-            <select id="langSelect">
-                <option value="french">French</option>
-                <option value="italian">Italian</option>
-                <option value="spanish">Spanish</option>
-                <option value="dutch">Dutch</option>
-                <option value="danish">Danish</option>
-                <option value="german">German</option>
-                <option value="arabic">Arabic</option>
-                <option value="chinese">Chinese</option>
-                <option value="japanese">Japanese</option>
-            </select>
-            <ol id="languages"></ol>
+            <div id="resultsBox" class="resultsBox">
+            <div id="errorBox"></div>
+                <h3>Definitions:</h3>
+                <ol id="definitions">
+                </ol>
+                <h3>Synonyms:</h3>
+                <ol id="synonyms">
+                </ol>
+                <h3>Antonyms:</h3>
+                <ol id="antonyms">
+                </ol>
+                <h3>Example:</h3>
+                <div id="example">
+                </div>
+                <h3>Translate:</h3>
+                <select id="langSelect">
+                    <option value="french">French</option>
+                    <option value="italian">Italian</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="dutch">Dutch</option>
+                    <option value="danish">Danish</option>
+                    <option value="german">German</option>
+                    <option value="arabic">Arabic</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="japanese">Japanese</option>
+                </select>
+                <ol id="languages"></ol>
+            </div>
         </div>
-    </div>
+        </div>
+        <div id="infoTab" class="tabcontent">
+            <p class="a">Using dictext is easy, simply highlight a word and enter it in the search bar.</p>
+            <p class="a">Dictext returns definitions, synonyms, antonyms, and an example of the word's usage.</p>
+            <p class="a">For more information, visit <a href="www.google.com">dictext.com</a></p>                
+        </div>
 </body>
 
 <!-- javascript -->

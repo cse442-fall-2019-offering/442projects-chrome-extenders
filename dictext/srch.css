@@ -55,6 +55,17 @@ input[type=text]:focus {
 	padding: 5px;
 }
 
+.tablink {
+	background-color: #a8cded;
+	color: white;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 13px;
+	width: 50%;
+}
+
 #loader {
 	display: "inline";
 	border: 3px solid #f3f3f3; /* Light grey */
@@ -63,9 +74,9 @@ input[type=text]:focus {
 	width: 16px;
 	height: 16px;
 	animation: spin 1s linear infinite;
-  }
+}
   
   @keyframes spin {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
-  }
+}
