@@ -1,6 +1,6 @@
 const Http = new XMLHttpRequest();
-//const url = "http://35.174.105.25/api/";
-const url = "http://127.0.0.1:5000/api/";
+const url = "http://35.174.105.25/api/";
+// const url = "http://127.0.0.1:5000/api/";
 
 const QUERY_BOX = document.getElementById("query");
 const DEF_LIST = document.getElementById("definitions");
