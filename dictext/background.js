@@ -25,6 +25,8 @@ chrome.browserAction.onClicked.addListener((tab) => {
 
 // Called when the user uses the keyboard shortcut
 chrome.commands.onCommand.addListener((tab) => {
-  queryForHighlighted();  // check if any text is highlighted
-  createDictWindow();     // create window for dictionary items
+  if (command == "Open the Dictionary") {
+    queryForHighlighted();  // check if any text is highlighted
+    createDictWindow();     // create window for dictionary items
+  }    // create window for dictionary items
 });
