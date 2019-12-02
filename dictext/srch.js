@@ -87,6 +87,9 @@ function fill_fields(response) {
 
 function queried() {
 //   e.preventDefault();
+  //let loading = document.getElementById("loader");
+  //loading.style.display = loading.style.display == "none" ? "block" : "none";
+
   DEF_LIST.innerHTML = "";
   SYN_LIST.innerHTML = "";
   ANT_LIST.innerHTML = "";
@@ -102,17 +105,25 @@ function queried() {
         });
       });
   }else{
-      get_request(searchText).then(gotten => {
-          fill_fields(gotten);
-      })
+    get_request(searchText).then(gotten => {
+        fill_fields(gotten);
+    });
   }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.addEventListener("keydown", (event) => {
-        if (event.code == "Enter"){
-            queried();
-        }
-    })
+  
+  queryForHighlighted().then(response => {
+    if (response.text != "") {
+      queried();
+    }
+  });
+  
+
+  document.addEventListener("keydown", (event) => {
+    if (event.code == "Enter"){
+        queried();
+    }
+  });
     //document.getElementById("search").addEventListener("oninput", queried);
 });

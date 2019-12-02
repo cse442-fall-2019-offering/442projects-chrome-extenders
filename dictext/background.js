@@ -18,11 +18,12 @@ function createDictWindow () {
 }
 
 // Called when the user clicks on the browser action.
+/*
 chrome.browserAction.onClicked.addListener((tab) => {
   //queryForHighlighted();  // check if any text is highlighted
   createDictWindow();     // create window for dictionary items
 });
-
+*/
 // Called when the user uses the keyboard shortcut
 chrome.commands.onCommand.addListener((tab) => {
   //queryForHighlighted();  // check if any text is highlighted
