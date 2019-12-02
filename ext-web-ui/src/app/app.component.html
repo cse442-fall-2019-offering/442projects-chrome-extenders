@@ -1,74 +1,135 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
 
-<div id="home" align="center" style="padding: 5%">
-<img src='full_logo.png' style="max-width:75%;"/>
-</div>
+  <style>
+    body,h1,h2 {
+      font-family: 'Montserrat', sans-serif;
+    }
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1,h2 {
-  font-family: "Raleway", sans-serif
-}
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
 
-body, html {
-  height: 100%
-}
+    .bg {
+      padding-top: 10px;
+      /* The image used */
+      background-image: url("full_logo.png");
 
-p {
-  line-height: 2
-}
-</style>
+      /* Full height */
+      height: 100%; 
 
-<!-- Navbar -->
-<div class="w3-top w3-hide-small" style="max-height: 5%">
-  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
-    <a href="#home" style="width:25%" class="w3-bar-item w3-button w3-hover-white">
-          <img src="logo.png" alt="logo" style="width:10%;height:10%" />
-      </a>
-    <a href="#about" style="width:25%" class="w3-bar-item w3-button w3-hover-white w3-hover-text-blue">About</a>
-    <a href="#demo" style="width:25%" class="w3-bar-item w3-button w3-hover-white w3-hover-text-blue">Demo</a>
-    <a href="#download" style="width:25%" class="w3-bar-item w3-button w3-hover-white w3-hover-text-blue">Download</a>
-  </div>
-</div>
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity:0.5;
+      transition: 1s ease;
+    }
+    
+    .bg:hover{
+      opacity:1;
+      transition: 1s ease;
+    }
 
-<!-- About -->
-<div class="w3-container w3-padding-64 w3-grayscale-min" id="about">
-  <div class="w3-content">
-    <h1 class="w3-center w3-text-grey"><b>About</b></h1>
-    <p>Enhance your vocabulary without breaking your focus.</p>
-    <p>for the student, dic&#123;t&#125;ext is a simple chrome extension that will take a highlighted word and automatically 
-      retrieve its definition, respective synonyms & antonyms, provides an example of the word used in a sentence, as well as 
-      listing hot articles where this word is frequently used.</p>
-      <p>This simple interface overlays the chrome page and saves the user time to look up an uncertain word’s definition and allows 
-        to work without breaking their workflow or focus.</p>
-  </div>
-</div>
+    p {
+      line-height: 2
+      color: #474545
+    }
 
-<!-- Demo -->
-<div class="w3-container w3-padding-64 w3-grayscale-min" id="demo">
-    <div class="w3-content">
-      <h1 class="w3-center w3-text-grey"><b>Demo</b></h1>
-      <p><i>This section is where the demo of the extension will be.</i>
-      </p>
+    .box{
+      border: 2px solid #a8cded;
+      border-style: none none solid none;
+      padding: 5px;
+    }
+
+    .left {
+      padding-left: 2%;
+      width: 30%;
+      float: left;
+    }
+
+    .right {
+      width: 60%;
+      float: right;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .button { /* Green */
+      background-color: white; 
+      color: #474545; 
+      border: 2px solid #a8cded;
+      padding: 15px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .hover{
+      background-color: white, !important 
+      color: #474545, !important
+      border: 2px solid #a8cded, !important
+      border-style: none none solid none !important
+    }
+
+  </style>
+</head>
+
+<body> 
+  <div class="bg"></div>
+  <!-- Navbar -->
+  <div class="w3-top w3-hide-small" style="max-height: 5%">
+    <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+      <a href="#home" style="width:25%" class="w3-bar-item w3-button w3-hover-white">
+            <img src="logo.png" alt="logo" style="width:10%;height:10%" />
+        </a>
+      <a href="#about" style="width:25%" class="w3-bar-item hover button"> <strong> About </strong> </a>
+      <a href="#demo" style="width:25%" class="w3-bar-item hover button"> <strong> Demo </strong> </a>
+      <a href="#download" style="width:25%" class="w3-bar-item hover button"> <strong> Download </strong> </a>
     </div>
   </div>
 
-<!-- Download button -->
-<div class="w3-container w3-padding-64 w3-grayscale-min" id="download">
+  <!-- About -->
+  <div class="w3-container w3-padding-64 w3-grayscale-min" id="about">
     <div class="w3-content">
-      <p class="w3-center"><a href="https://github.com/cse442-fall-2019-offering/442projects-chrome-extenders" class="w3-button w3-light-gray w3-round w3-padding-large w3-large">Download now!</a></p>
+      <h1 class="w3-center w3-text-grey box"><b>About</b></h1>
+      <div class="row">
+        <div class="column left">
+          <img src="snapshot.png" alt=""/>
+        </div>
+        <div class="column right box">
+          <p> <strong> This story begins with our not so lucky hero John. Whenever he would do school work, he would often have to look up the meaning of certain words while studying, or search for longer synonyms to add length to his essays. Being not the most disciplined student, he often got distracted and pulled away from his work during this task. Unable to remain diligent in his work, his quality of work suffered and his grades ultimately dropped and he ultimately flunked out of college. </p> <p> Whether you’re a student or a professional, having to break your workflow to look up a word’s definition can break your focus and in turn cause unnecessary distractions. In an effort to help streamline workflow and improve performance, we created dic{t}ext! A simple and easy to use extension to add to your chrome browser. With this simple and easy to use extension, you can easily look up a word’s definition with ease! As simple as pressing Ctrl + Shift + 9! And in case you need synonyms or antonyms, those are available too along with an example of the word used in a sentence. </p>
+          <p> You can also translate words into different languages! Currently dic{t}ext supports translation into 9 different languages. With a simple selection one can easily find the translation of a word into their choice of French, Italian, Spanish, Dutch, Danish, German, Arabic, Chinese or Japanese. Never again do you have to break focus from your work and compromise your attention. All thanks to dic{t}ext! </strong></p>
+        </div>
+      </div>
     </div>
   </div>
 
-<!-- Footer -->
-<footer class="w3-center w3-padding-16">
-    <p>Credit to <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-blue">w3.css</a>
-    and <a href="https://angular.io/" title="angular" target="_blank" class="w3-hover-text-blue">Angular</a></p>
-  </footer>
-  <div class="w3-hide-small" style="margin-bottom:32px"> </div>  
+  <!-- Demo -->
+  <div class="w3-container w3-padding-64 w3-grayscale-min" id="demo">
+      <div class="w3-content" align="center">
+        <h1 class="w3-center w3-text-grey box"><b>Demo</b></h1>
+        <iframe width="947" height="360" src="https://www.youtube.com/embed/HdLy6M55kUc?list=WL" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+  </div>
+
+  <!-- Download button -->
+  <div class="container" id="download">
+    <div class="w3-content">
+      <p class="w3-center"><a href="https://github.com/cse442-fall-2019-offering/442projects-chrome-extenders" class="button"> <strong>Download! </strong> </a></p>
+    </div>
+  </div>
+
+</body>
 
 </html>
-
-<router-outlet></router-outlet>
