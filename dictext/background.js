@@ -7,8 +7,8 @@ function createDictWindow () {
       focused: true,
       top: 60,
       left: 20,
-      width: 200,
-      height: 200
+      width: 300,
+      height: 550
     },
     window => {
       window.WindowType = "app";
@@ -19,12 +19,12 @@ function createDictWindow () {
 
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener((tab) => {
-  queryForHighlighted();  // check if any text is highlighted
+  //queryForHighlighted();  // check if any text is highlighted
   createDictWindow();     // create window for dictionary items
 });
 
 // Called when the user uses the keyboard shortcut
 chrome.commands.onCommand.addListener((tab) => {
-  queryForHighlighted();  // check if any text is highlighted
+  //queryForHighlighted();  // check if any text is highlighted
   createDictWindow();     // create window for dictionary items
 });
